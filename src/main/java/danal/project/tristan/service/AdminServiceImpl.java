@@ -41,7 +41,7 @@ public class AdminServiceImpl implements AdminService{
 		oldAdmin.setfAdminId(admin.getfAdminId());
 		oldAdmin.setfAdminPw(bcryptEncoder.encode(admin.getfAdminPw()));
 		oldAdmin.setfName(admin.getfName());
-		oldAdmin.setfLevel(admin.getfLevel());
+		
 		oldAdmin.setfStatus(admin.getfLevel());
 		oldAdmin.setfRegDt(admin.getfRegDt());
 		
