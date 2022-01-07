@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "3de3788b-4dc7-4dcd-b4b4-a50bd0d32321",
+		"name": "ADMIN_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetListAdmin",
+			"item": [
+				{
+					"name": "Get List Admin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjIiLCJleHAiOjE2MzYwMzEyMDgsImlhdCI6MTYzNTkxMTIwOH0.shV_R1IanC8FaP3nNz7PnygCh5YlsWCodvF63i_vHafTDxP4fecsZ3_yjGxhmRgMj8c8cRA2mScAvx5mEa9gdQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8081/admin/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"admin",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Update Profile",
+			"item": [
+				{
+					"name": "UpdateProfileAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjIiLCJleHAiOjE2MzYwMzI4ODEsImlhdCI6MTYzNTkxMjg4MX0._y-11H2jYrKdN2C9v2yWR6wAohnC_I-ZUU7dY7WlTNx5ilqtLE0BXV7_TA5sV91x7qXj9QtkR8ar1hK19OBIqA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fAdminId\": \"admin2\",\r\n    \"fAdminPw\": \"admin123\",\r\n    \"fName\": \"tristan\",\r\n    \"fStatus\": \"Y\",\r\n    \"fLevel\": \"1\",\r\n    \"fRegDt\": \"2021-10-07T01:22:19.000+00:00\",\r\n    \"fModiDt\": \"2021-10-07T01:22:19.000+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/admin/update/admin2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"admin",
+								"update",
+								"admin2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find_Admin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYzNjAzNDE5OSwiaWF0IjoxNjM1OTE0MTk5fQ.q8fR5hYEkMjR3pIhLB1DLwvG9UovHMh37BgGkJC304e9x5u6U7cGQ3Uwf5zlWEsFqkMcytz59fmf4_lS8ul2EA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/admin/find/admin2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"admin",
+								"find",
+								"admin2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin_Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fAdminId\": \"admin\",\r\n    \"fAdminPw\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/admin/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
